@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.stems.web</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>__REPO__/.venv/bin/stemsd</string>
+        <string>web</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>__HOME__</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>__HOME__</string>
+        <key>USER</key>
+        <string>__USER__</string>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>STEMS_OUT</key>
+        <string>__OUT__</string>
+        <key>STEMS_PUBLIC_URL</key>
+        <string>__PUBLIC_URL__</string>
+        <key>STEMS_PORT</key>
+        <string>__PORT__</string>
+        <key>STEMS_NO_OPEN</key>
+        <string>1</string>
+        <key>PYTHONUNBUFFERED</key>
+        <string>1</string>
+        <key>PYTORCH_ENABLE_MPS_FALLBACK</key>
+        <string>1</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+    <key>ProcessType</key>
+    <string>Standard</string>
+    <key>StandardOutPath</key>
+    <string>__HOME__/Library/Logs/stems/web.log</string>
+    <key>StandardErrorPath</key>
+    <string>__HOME__/Library/Logs/stems/web.log</string>
+</dict>
+</plist>

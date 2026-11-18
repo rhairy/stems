@@ -1,0 +1,20 @@
+[project]
+name = "stems"
+version = "0.3.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "audio-separator[cpu]>=0.48",
+    "yt-dlp",
+    "audioread",  # imported by audio-separator but not declared by it
+]
+
+[project.scripts]
+stems = "stems:main"
+stemsd = "stemsd:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["stems", "stemsd"]
